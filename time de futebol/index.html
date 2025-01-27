@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Jogadores</title>
+  <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+  <header>
+    <h1>Gestão de Jogadores</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="form-container">
+        <h2>Escalar Jogador</h2>
+        <form id="form-escalar">
+          <label for="posicao">Posição:</label>
+          <select id="posicao" name="posicao" required>
+            <option value="">Selecione</option>
+            <option value="goleiro">Goleiro</option>
+            <option value="zagueiro-esquerdo">Zagueiro Esquerdo</option>
+            <option value="zagueiro-direito">Zagueiro Direito</option>
+            <option value="lateral-esquerdo">Lateral Esquerdo</option>
+            <option value="lateral-direito">Lateral Direito</option>
+            <option value="volante">Volante</option>
+            <option value="meio-campo">Meio Campo</option>
+            <option value="atacante-esquerdo">Atacante Esquerdo</option>
+            <option value="atacante-direito">Atacante Direito</option>
+            <option value="centroavante">Centroavante</option>
+          </select>
+
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex: João" required>
+
+          <label for="numero">Número:</label>
+          <input type="number" id="numero" name="numero" placeholder="Ex: 10" required>
+
+          <button type="submit">Adicionar Jogador</button>
+        </form>
+
+        <h2>Remover Jogador</h2>
+        <form id="form-remover">
+          <label for="numero-remover">Número do jogador:</label>
+          <input type="text" id="numero-remover" name="numero-remover" required>
+
+          <button type="submit">Remover</button>
+        </form>
+      </div>
+
+      <div class="lista-container">
+        <h2>Jogadores Escalados</h2>
+        <ul id="lista-jogadores"></ul>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
